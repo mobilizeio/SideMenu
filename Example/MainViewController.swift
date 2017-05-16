@@ -54,6 +54,8 @@ class MainViewController: UIViewController {
         shrinkFactorSlider.value = Float(SideMenuManager.rightMenuConfig.menuAnimationTransformScaleFactor)
         screenWidthSlider.value = Float(SideMenuManager.rightMenuConfig.menuWidth / view.frame.width)
         blackOutStatusBar.isOn = SideMenuManager.rightMenuConfig.menuFadeStatusBar
+        
+        SideMenuManager.rightMenuConfig.menuDismissOnMoveToBacground = false
     }
     
     @IBAction fileprivate func changeSegment(_ segmentControl: UISegmentedControl) {
