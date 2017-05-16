@@ -115,6 +115,9 @@ open class MenuConfiguration : NSObject{
     /// The animation initial spring velocity when a menu is displayed. Ignored when displayed with a gesture.
     open var menuAnimationInitialSpringVelocity: CGFloat = 1
     
+    /// Should close an open side menu if the app is moving to background
+    open var menuDismissOnMoveToBacground = true
+    
     /// -Warning: Deprecated. Use `menuPushStyle = .subMenu` instead.
     @available(*, deprecated, renamed: "menuPushStyle", message: "Use `menuPushStyle = .subMenu` instead.")
     open var menuAllowSubmenus: Bool {

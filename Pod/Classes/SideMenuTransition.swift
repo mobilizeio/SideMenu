@@ -380,6 +380,11 @@ open class SideMenuTransition: UIPercentDrivenInteractiveTransition {
         }
         
         if notification.name == NSNotification.Name.UIApplicationDidEnterBackground {
+            
+            if SideMenuTransition.menuConfigByTransition().menuDismissOnMoveToBacground == false{
+                return
+            }
+            
             SideMenuTransition.hideMenuStart()
             SideMenuTransition.hideMenuComplete()
             menuViewController.dismiss(animated: false, completion: nil)
